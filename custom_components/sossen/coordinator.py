@@ -47,7 +47,7 @@ class SossenCoordinator(DataUpdateCoordinator):
         self._power_limit: int | None = entry.data.get(
             "power_limit_last", POWER_LIMIT_MAX
         )
-        self._limit_read_pending: bool = "power_limit_last" not in entry.data
+        self._limit_read_pending: bool = entry.data.get("power_limit_last") is None
         self.daytime_only: bool = entry.data.get(CONF_DAYTIME_ONLY, True)
 
     def _is_sun_up(self) -> bool:
