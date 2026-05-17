@@ -33,7 +33,7 @@ class SossenPowerLimit(CoordinatorEntity, NumberEntity):
     """Number entity to set the inverter power limit."""
 
     _attr_has_entity_name = True
-    _attr_name = "Limite Potenza"
+    _attr_translation_key = "power_limit"
     _attr_icon = "mdi:transmission-tower"
     _attr_native_min_value = POWER_LIMIT_MIN
     _attr_native_max_value = POWER_LIMIT_MAX

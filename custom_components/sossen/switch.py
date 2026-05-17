@@ -26,7 +26,7 @@ class SossenDaytimeSwitch(CoordinatorEntity, SwitchEntity):
     """Switch to enable daytime-only polling."""
 
     _attr_has_entity_name = True
-    _attr_name = "Solo Diurno"
+    _attr_translation_key = "daytime_only"
     _attr_icon = "mdi:weather-sunny"
 
     def __init__(

@@ -26,5 +26,36 @@
     "abort": {
       "already_configured": "This device is already configured."
     }
+  },
+  "entity": {
+    "sensor": {
+      "dc_power_total_w": { "name": "DC Total Power" },
+      "ac_power_w": { "name": "AC Power" },
+      "ac_voltage_v": { "name": "AC Voltage" },
+      "ac_frequency_hz": { "name": "AC Frequency" },
+      "dc_voltage_1_v": { "name": "DC Voltage 1" },
+      "dc_current_1_a": { "name": "DC Current 1" },
+      "dc_power_1_w": { "name": "DC Power 1" },
+      "dc_voltage_2_v": { "name": "DC Voltage 2" },
+      "dc_current_2_a": { "name": "DC Current 2" },
+      "dc_power_2_w": { "name": "DC Power 2" },
+      "dc_voltage_3_v": { "name": "DC Voltage 3" },
+      "dc_current_3_a": { "name": "DC Current 3" },
+      "dc_power_3_w": { "name": "DC Power 3" },
+      "dc_voltage_4_v": { "name": "DC Voltage 4" },
+      "dc_current_4_a": { "name": "DC Current 4" },
+      "dc_power_4_w": { "name": "DC Power 4" },
+      "energy_total_kwh": { "name": "Total Energy" },
+      "temperature_c": { "name": "Temperature" },
+      "wifi_signal": { "name": "Wi-Fi Signal" },
+      "status": { "name": "Status" },
+      "raw": { "name": "Raw Data" }
+    },
+    "number": {
+      "power_limit": { "name": "Power Limit" }
+    },
+    "switch": {
+      "daytime_only": { "name": "Daytime Only" }
+    }
   }
 }

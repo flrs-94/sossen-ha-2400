@@ -76,7 +76,7 @@ class SossenRawSensor(CoordinatorEntity, SensorEntity):
     """Diagnostic sensor showing all raw DP values."""
 
     _attr_has_entity_name = True
-    _attr_name = "Raw Data"
+    _attr_translation_key = "raw"
     _attr_icon = "mdi:bug"
     _attr_entity_registry_enabled_default = False
 
