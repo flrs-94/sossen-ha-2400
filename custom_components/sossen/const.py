@@ -29,8 +29,9 @@ DP_DC_POWER_1 = 4147
 DP_DC_CURRENT_2 = 4149
 DP_DC_VOLTAGE_2 = 4150
 DP_DC_POWER_2 = 4151
-# DP 4152 and 4156 are numeric gaps in the otherwise regular channel sequence.
-# Their function for this model is still unknown, so they are left unmapped.
+# Datapoints 4152 and 4156 represent numeric gaps in the otherwise regular
+# channel sequence. Their function for this model is still unknown, so they are
+# left unmapped.
 DP_DC_CURRENT_3 = 4153
 DP_DC_VOLTAGE_3 = 4154
 DP_DC_POWER_3 = 4155
