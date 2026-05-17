@@ -1,14 +1,14 @@
-# SOSSEN Microinverter
+# SOSSEN 4in1 2400W Microinverter
 
-Local integration for **SOSSEN 2in1-DE** microinverters (600W / 800W / 1000W).
+Local integration for the **SOSSEN 4in1 2400W** microinverter.
 
 Direct communication over the local network — no cloud, no delays.
 
 ## Features
 
-* **13 sensors** for real-time solar production (power, voltage, current, frequency, temperature, energy)
+* **18 sensors** for real-time solar production (power, voltage, current, frequency, temperature, energy)
 * **Inverter status** with 3 states: producing, alarm, off
-* **Power limit control** (500-1000W) directly from HA
+* **Power limit control** (500-2400W) directly from HA
 * **Daytime-only mode** to avoid polling at night
 * **Diagnostic sensor** with all raw register values
 * Updates every **10 seconds** (configurable)
@@ -21,6 +21,4 @@ Direct communication over the local network — no cloud, no delays.
 
 ## Tested models
 
-* SOSSEN 2in1-DE 600W
-* SOSSEN 2in1-DE 800W
-* SOSSEN 2in1-DE 1000W
+* SOSSEN 4in1 2400W

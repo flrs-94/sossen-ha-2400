@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "SOSSEN Microinverter",
+        "title": "SOSSEN 4in1 2400W Microinverter",
         "description": "Enter the connection details for your SOSSEN inverter.\n\n⚠️ **The inverter must be producing solar energy** (it is completely off at night). After setup, allow 2-3 minutes before data starts appearing.",
         "data": {
           "device_ip": "Device IP Address",

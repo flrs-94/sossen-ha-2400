@@ -1,7 +1,6 @@
 """Data update coordinator for SOSSEN Microinverter."""
 
 import logging
-import time
 from datetime import timedelta
 
 import tinytuya
@@ -17,6 +16,7 @@ from .const import (
     CONF_LOCAL_KEY,
     CONF_POLL_INTERVAL,
     DEFAULT_POLL_INTERVAL,
+    POWER_LIMIT_MAX,
     DOMAIN,
     TUYA_DP_COMMAND,
     TUYA_DP_DATA,
@@ -44,7 +44,7 @@ class SossenCoordinator(DataUpdateCoordinator):
         self._device_ip = entry.data[CONF_DEVICE_IP]
         self._local_key = entry.data[CONF_LOCAL_KEY]
         self._device: tinytuya.Device | None = None
-        self._power_limit: int | None = entry.data.get("power_limit_last", 800)
+        self._power_limit: int | None = entry.data.get("power_limit_last")
         self._limit_read_pending: bool = self._power_limit is None
         self.daytime_only: bool = entry.data.get(CONF_DAYTIME_ONLY, True)
 
@@ -134,7 +134,7 @@ class SossenCoordinator(DataUpdateCoordinator):
         try:
             data = await self.hass.async_add_executor_job(self._sync_poll)
             if data is not None:
-                _LOGGER.debug("Got data: power=%sW", data.get("power_w"))
+                _LOGGER.debug("Got data: AC power=%sW", data.get("ac_power_w"))
                 # Read power limit once after first successful poll
                 if self._limit_read_pending:
                     limit = await self.hass.async_add_executor_job(

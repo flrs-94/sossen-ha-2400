@@ -4,6 +4,10 @@ from homeassistant.components.sensor import SensorDeviceClass, SensorStateClass
 
 DOMAIN = "sossen"
 DEFAULT_POLL_INTERVAL = 10
+DEVICE_NAME = "SOSSEN 4in1 2400W Microinverter"
+DEVICE_MODEL = "4in1 2400W"
+POWER_LIMIT_MIN = 500
+POWER_LIMIT_MAX = 2400
 
 CONF_DEVICE_ID = "device_id"
 CONF_DEVICE_IP = "device_ip"
@@ -25,6 +29,12 @@ DP_DC_POWER_1 = 4147
 DP_DC_CURRENT_2 = 4149
 DP_DC_VOLTAGE_2 = 4150
 DP_DC_POWER_2 = 4151
+DP_DC_CURRENT_3 = 4153
+DP_DC_VOLTAGE_3 = 4154
+DP_DC_POWER_3 = 4155
+DP_DC_CURRENT_4 = 4157
+DP_DC_VOLTAGE_4 = 4158
+DP_DC_POWER_4 = 4159
 DP_DC_POWER_TOTAL = 4169
 DP_WIFI_SIGNAL = 4172
 DP_TEMPERATURE = 4183
@@ -110,6 +120,48 @@ SENSOR_DEFINITIONS = [
     {
         "key": "dc_power_2_w",
         "name": "Potenza DC 2",
+        "device_class": SensorDeviceClass.POWER,
+        "unit": "W",
+        "state_class": SensorStateClass.MEASUREMENT,
+    },
+    {
+        "key": "dc_voltage_3_v",
+        "name": "Tensione DC 3",
+        "device_class": SensorDeviceClass.VOLTAGE,
+        "unit": "V",
+        "state_class": SensorStateClass.MEASUREMENT,
+    },
+    {
+        "key": "dc_current_3_a",
+        "name": "Corrente DC 3",
+        "device_class": SensorDeviceClass.CURRENT,
+        "unit": "A",
+        "state_class": SensorStateClass.MEASUREMENT,
+    },
+    {
+        "key": "dc_power_3_w",
+        "name": "Potenza DC 3",
+        "device_class": SensorDeviceClass.POWER,
+        "unit": "W",
+        "state_class": SensorStateClass.MEASUREMENT,
+    },
+    {
+        "key": "dc_voltage_4_v",
+        "name": "Tensione DC 4",
+        "device_class": SensorDeviceClass.VOLTAGE,
+        "unit": "V",
+        "state_class": SensorStateClass.MEASUREMENT,
+    },
+    {
+        "key": "dc_current_4_a",
+        "name": "Corrente DC 4",
+        "device_class": SensorDeviceClass.CURRENT,
+        "unit": "A",
+        "state_class": SensorStateClass.MEASUREMENT,
+    },
+    {
+        "key": "dc_power_4_w",
+        "name": "Potenza DC 4",
         "device_class": SensorDeviceClass.POWER,
         "unit": "W",
         "state_class": SensorStateClass.MEASUREMENT,

@@ -6,7 +6,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .const import CONF_DEVICE_ID, DOMAIN, SENSOR_DEFINITIONS
+from .const import CONF_DEVICE_ID, DEVICE_MODEL, DEVICE_NAME, DOMAIN, SENSOR_DEFINITIONS
 from .coordinator import SossenCoordinator
 
 
@@ -54,9 +54,9 @@ class SossenSensor(CoordinatorEntity, SensorEntity):
         """Return device info to group all entities under one device."""
         return {
             "identifiers": {(DOMAIN, self.coordinator.entry.data[CONF_DEVICE_ID])},
-            "name": "SOSSEN Microinverter",
+            "name": DEVICE_NAME,
             "manufacturer": "SOSSEN",
-            "model": "2in1-DE 800W",
+            "model": DEVICE_MODEL,
         }
 
     @property
@@ -90,9 +90,9 @@ class SossenRawSensor(CoordinatorEntity, SensorEntity):
         """Return device info."""
         return {
             "identifiers": {(DOMAIN, self.coordinator.entry.data[CONF_DEVICE_ID])},
-            "name": "SOSSEN Microinverter",
+            "name": DEVICE_NAME,
             "manufacturer": "SOSSEN",
-            "model": "2in1-DE 800W",
+            "model": DEVICE_MODEL,
         }
 
     @property
@@ -100,7 +100,7 @@ class SossenRawSensor(CoordinatorEntity, SensorEntity):
         """Return timestamp of last update."""
         if not self.coordinator.data:
             return None
-        return self.coordinator.data.get("power_w")
+        return self.coordinator.data.get("ac_power_w")
 
     @property
     def extra_state_attributes(self):
