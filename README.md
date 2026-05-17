@@ -1,6 +1,6 @@
-# SOSSEN Microinverter - Home Assistant Integration
+# SOSSEN 4in1 2400W Microinverter - Home Assistant Integration
 
-Local integration for **SOSSEN 2in1-DE** microinverters (600W / 800W / 1000W) for Home Assistant.
+Local integration for the **SOSSEN 4in1 2400W** microinverter for Home Assistant.
 
 Direct communication over the **local network** via Tuya v3.5 protocol — no cloud, no delays, no external servers.
 
@@ -12,13 +12,13 @@ This integration reads production data directly from the SOSSEN microinverter an
 
 | Sensor | Description | Unit |
 |--------|-------------|------|
-| DC Total Power | Combined power from both panels | W |
+| DC Total Power | Combined power from all four panels | W |
 | AC Power | Inverter output power (fed to grid) | W |
 | AC Voltage | Grid voltage | V |
 | AC Frequency | Grid frequency | Hz |
-| DC Voltage 1 / 2 | Input voltage from each panel | V |
-| DC Current 1 / 2 | Input current from each panel | A |
-| DC Power 1 / 2 | Power from each panel | W |
+| DC Voltage 1 / 2 / 3 / 4 | Input voltage from each panel | V |
+| DC Current 1 / 2 / 3 / 4 | Input current from each panel | A |
+| DC Power 1 / 2 / 3 / 4 | Power from each panel | W |
 | Total Energy | Cumulative energy counter (odometer style) | kWh |
 | Temperature | Inverter internal temperature | C |
 | Inverter Status | Operating state: producing / alarm / off | — |
@@ -27,7 +27,7 @@ This integration reads production data directly from the SOSSEN microinverter an
 
 | Control | Description |
 |---------|-------------|
-| Power Limit | Set the output power limit (500-1000W) |
+| Power Limit | Set the output power limit (500-2400W) |
 | Daytime Only | Enable/disable polling only during daylight hours |
 
 ### Diagnostics
@@ -38,11 +38,9 @@ This integration reads production data directly from the SOSSEN microinverter an
 
 ## Supported models
 
-- **SOSSEN 2in1-DE 600W**
-- **SOSSEN 2in1-DE 800W** (tested)
-- **SOSSEN 2in1-DE 1000W** (software upgrade of the same hardware)
+- **SOSSEN 4in1 2400W**
 
-Potentially compatible with other SOSSEN microinverters using the Tuya v3.5 protocol with proprietary Base64 payload. If you have a different model and it works (or doesn't), please open an issue!
+Potentially compatible with other SOSSEN 4-in-1 microinverters using the Tuya v3.5 protocol with proprietary Base64 payload. If you have a different 4-in-1 variant and it works (or doesn't), please open an issue!
 
 ## Requirements
 
@@ -56,7 +54,7 @@ Potentially compatible with other SOSSEN microinverters using the Tuya v3.5 prot
 
 1. Open HACS in Home Assistant
 2. Go to **Integrations** → three-dot menu → **Custom repositories**
-3. Add `https://github.com/caveman2024/sossen-ha` as type **Integration**
+3. Add `https://github.com/flrs-94/sossen-ha-2400` as type **Integration**
 4. Search for "SOSSEN" and install
 5. Restart Home Assistant
 6. Go to **Settings → Devices & Services → Add Integration** → search for "SOSSEN"
@@ -106,9 +104,7 @@ For an animated energy flow dashboard, install [Power Flow Card Plus](https://gi
 
 ## Author
 
-Developed by **caveman2024** with the assistance of Claude Code (Anthropic).
-
-Born from the need to monitor a residential solar system with Astronergy N7S 450W bifacial panels, after discovering that standard Tuya integrations do not support the proprietary SOSSEN protocol.
+Originally developed by **caveman2024** and adapted for the **SOSSEN 4in1 2400W** model in this fork.
 
 ## License
 
@@ -116,6 +112,6 @@ MIT
 
 ## Contributing
 
-Bug reports and pull requests are welcome on [GitHub](https://github.com/caveman2024/sossen-ha/issues).
+Bug reports and pull requests are welcome on [GitHub](https://github.com/flrs-94/sossen-ha-2400/issues).
 
 If you have a SOSSEN inverter with a different model, your raw data (from the "Raw Data" diagnostic sensor) is valuable for mapping new registers!

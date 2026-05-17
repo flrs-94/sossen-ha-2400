@@ -14,6 +14,7 @@ from .const import (
     CONF_LOCAL_KEY,
     CONF_POLL_INTERVAL,
     DEFAULT_POLL_INTERVAL,
+    DEVICE_NAME,
     DOMAIN,
 )
 
@@ -47,7 +48,7 @@ class SossenConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             # and the UI mangles special characters in the key.
             # Just save and let the coordinator handle connection.
             return self.async_create_entry(
-                title="SOSSEN Microinverter",
+                title=DEVICE_NAME,
                 data=user_input,
             )
 
