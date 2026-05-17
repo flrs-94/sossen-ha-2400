@@ -28,7 +28,7 @@ class SossenStatusSensor(CoordinatorEntity, SensorEntity):
     """Sensor with 3 states: producing, alarm, off."""
 
     _attr_has_entity_name = True
-    _attr_name = "Stato"
+    _attr_translation_key = "status"
     _attr_icon = "mdi:solar-power"
 
     def __init__(

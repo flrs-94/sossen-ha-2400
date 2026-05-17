@@ -26,5 +26,36 @@
     "abort": {
       "already_configured": "Questo dispositivo è già configurato."
     }
+  },
+  "entity": {
+    "sensor": {
+      "dc_power_total_w": { "name": "Potenza DC Totale" },
+      "ac_power_w": { "name": "Potenza AC" },
+      "ac_voltage_v": { "name": "Tensione AC" },
+      "ac_frequency_hz": { "name": "Frequenza AC" },
+      "dc_voltage_1_v": { "name": "Tensione DC 1" },
+      "dc_current_1_a": { "name": "Corrente DC 1" },
+      "dc_power_1_w": { "name": "Potenza DC 1" },
+      "dc_voltage_2_v": { "name": "Tensione DC 2" },
+      "dc_current_2_a": { "name": "Corrente DC 2" },
+      "dc_power_2_w": { "name": "Potenza DC 2" },
+      "dc_voltage_3_v": { "name": "Tensione DC 3" },
+      "dc_current_3_a": { "name": "Corrente DC 3" },
+      "dc_power_3_w": { "name": "Potenza DC 3" },
+      "dc_voltage_4_v": { "name": "Tensione DC 4" },
+      "dc_current_4_a": { "name": "Corrente DC 4" },
+      "dc_power_4_w": { "name": "Potenza DC 4" },
+      "energy_total_kwh": { "name": "Energia Totale" },
+      "temperature_c": { "name": "Temperatura" },
+      "wifi_signal": { "name": "Segnale Wi-Fi" },
+      "status": { "name": "Stato" },
+      "raw": { "name": "Dati Grezzi" }
+    },
+    "number": {
+      "power_limit": { "name": "Limite Potenza" }
+    },
+    "switch": {
+      "daytime_only": { "name": "Solo Diurno" }
+    }
   }
 }
