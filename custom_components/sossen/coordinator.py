@@ -44,8 +44,10 @@ class SossenCoordinator(DataUpdateCoordinator):
         self._device_ip = entry.data[CONF_DEVICE_IP]
         self._local_key = entry.data[CONF_LOCAL_KEY]
         self._device: tinytuya.Device | None = None
-        self._power_limit: int | None = entry.data.get("power_limit_last")
-        self._limit_read_pending: bool = self._power_limit is None
+        self._power_limit: int | None = entry.data.get(
+            "power_limit_last", POWER_LIMIT_MAX
+        )
+        self._limit_read_pending: bool = "power_limit_last" not in entry.data
         self.daytime_only: bool = entry.data.get(CONF_DAYTIME_ONLY, True)
 
     def _is_sun_up(self) -> bool:

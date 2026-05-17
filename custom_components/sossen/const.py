@@ -29,6 +29,7 @@ DP_DC_POWER_1 = 4147
 DP_DC_CURRENT_2 = 4149
 DP_DC_VOLTAGE_2 = 4150
 DP_DC_POWER_2 = 4151
+# DP 4152 and 4156 are not exposed as channel metrics in observed payloads.
 DP_DC_CURRENT_3 = 4153
 DP_DC_VOLTAGE_3 = 4154
 DP_DC_POWER_3 = 4155
